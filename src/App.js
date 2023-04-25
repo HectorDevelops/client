@@ -1,10 +1,18 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import FormComponent from './components/FormComponent'
+import OneProductId from './views/OneProductId'
+// import ManagerList from './components/ManagerList';
 
 function App() {
   return (
     <div className="App">
-      <h3>Product Manager</h3>
-      
+
+      <Routes>
+        <Route path='/manager' element={<FormComponent />} />
+        <Route path="/manager/:id" element={<OneProductId />} />
+      </Routes>
+
     </div>
   );
 }
